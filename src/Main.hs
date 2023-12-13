@@ -64,7 +64,7 @@ buildUI wenv model = widgetTree where
         filler,
         label ("" <> model ^. datell) `styleBasic` [styleIf (model ^. tasktf) (textColor (rgbHex "#47257E")), styleIf (not (model ^. tasktf)) (textColor (rgbHex "#FF477E")), textSize 20, textFont "Bold"],
         spacer,
-        button "del" TodoDelete
+        button "Delete" TodoDelete
         --label $ "Click count: " <> showt (model ^. clickCount),
       ]
     ] `styleBasic` [padding 10]
@@ -144,7 +144,6 @@ customTheme = baseTheme darkThemeColors {
   inputText = rgbHex "#800F2F",
   btnBgActive = rgbHex "#FF99AC",
   slMainBg = rgbHex "#000000",
-  tooltipBorder = black,
   dialogText = black,
   sectionColor = rgbHex "FF99AC",
   btnBgBasic = rgbHex "#FF99AC",
